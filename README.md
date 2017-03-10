@@ -34,3 +34,7 @@ to insert a citation in `paper.org`, just do `, i c` in spacemacs to pull up org
 (org-ref comes with the spacemacs bibtex layer - see spacemacs docs for installing that.)
 
 you can keep your raw data in `data/`, and do your analysis in `analysis/`. export or copy your figures to `figures/`.
+
+## license
+
+BSD
