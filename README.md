@@ -1,11 +1,17 @@
-# empty acm paper
+# NSPW 2017
 
-project template for an ACM article, generated from an org mode file
+nspw 2017 file
+
 
 ## setup
 
-add this to your .spacemacs
-(you only have to do this once)
+an org mode file (paper.org) is used to generate a .tex file, and ultimately a pdf.
+
+to generate these files, I recommend spacemacs.
+
+1. add the `org` and `bibtex` layers.
+
+2. add this to your `.spacemacs` (you only have to do this once)
 
 ```elisp
   (add-to-list 'org-latex-classes
