@@ -32,26 +32,30 @@ cite:Johnson2014 showed this protocol to be robust against impersonation attacks
 While recent work is heartening, passthoughts remains confined, for now, to the lab.
 This paper reviews the immediate questions that must be addressed if passthoughts is to move into everyday life.
 
-First, we must test passthoughts in a variety of conditions: ambulatory settings, under different levels of stress, drowsiness, caffeine or alcohol, etc.
-Through this work, we may build a better understanding of the statistical distribution of EEG signals that a person gives off during the course of their life. 
-This statistical analysis will help us understand the space of possibile passthoughts. 
-It will also help us estimate how easy or difficult passthoughts are to guess, or crack.
-
-Second, we must understand the real usability properties of passthoughts.
+First, we must understand the real usability properties of passthoughts.
 While much work has claimed passthoughst to be more usable than traditional multi-factor authentication protocols,
 as of yet, no work systematically evaluates this claim.
 The usability of passthoughts authentication will depend not only on its performance in ecologically valid contexts,
-but also on people's attitudes about brainwaves, EEG, and biosensing generally.
-Past work indicates that people believe EEG can reveal what someone is thinking or feeling, which could scare off wider adoption (Section 4).
+but also on people's attitudes about brainwaves, EEG, and biosensing generally (Section 3).
+# Past work indicates that people believe EEG can reveal what someone is thinking or feeling, which could scare off wider adoption 
 
-The main goal of this paper is to motivate and contextualize immediate studies that can address the above issues.
-Section 5 proposes two, complementary studies.
-The first proposed study focuses on the use of passthoughts in a realistic, though lab-constrained setting.
-By fixing some parameters (context of use, and feedback to the user), this study would allow a first look at how passthoughts might work
-in a real-time application context.
-The second proposed study focuses on people's longitudinal relationships with EEG in their everyday life.
-This study focuses not on differences in behavior between experimental conditions, but on evolving attitudes (and changing signals) over time,
-as a way of assessing both dynamic user attitudes, and the possible impact of shifting neural signals.
+Second, we must test passthoughts in a variety of conditions: ambulatory settings, under different levels of stress, drowsiness, caffeine or alcohol, etc.
+This statistical analysis will help us understand how passthoughts change over time.
+It will also help us understand the space of possible passthoguhts (Section 4).
+# It will also help us estimate how easy or difficult passthoughts are to guess, or crack (Section 4).
+# Through this work, we may build a better understanding of the statistical distribution of EEG signals that a person gives off during the course of their life. 
+
+
+#+caption: A passthought authenticator.
+\label{fig:diagram}
+[[./figures/passthoughts-diagram.png]]
+
+The main goal of this paper is to motivate and contextualize immediate studies that can address the above issues (Section 5).
+The first study focuses on the use of passthoughts in a realistic, though lab-constrained setting, 
+allowing a first look at how passthoughts might work in a real-time application context.
+The second proposed study focuses on people's longitudinal relationships with EEG in their everyday life,
+focusing not on behavioral differences experimental conditions, but on evolving attitudes (and signals) over longer timescales,
+allowing assessment of both dynamic user attitudes, and the possible impact of shifting neural signals.
 
 Passthought authentication stands a chance at becoming the first brain-computer interface to reach wider adoption. 
 As such, passthoughts promises not only more usable, multi-factor authentication,
@@ -62,11 +66,9 @@ e.g. for people with motor disabilities cite:Mattia2013.
 closed-loop authentication, continuous and/or tacit authentication, 
 and possible theoretical contributions to neuroscience, authentication and HCI (Section 7).
 
-#+caption: A passthought authenticator.
-\label{fig:earbud}
-[[./figures/passthoughts-diagram.png]]
-
 * Background
+
+
 
 Authentication is the act of proving that a user is who they claim to be.
 In computer security, authenticators are classified into three types: knowledge factors (e.g., passwords
@@ -86,7 +88,7 @@ due to its additional hassle to users. The Apple iPhone, for instance,
 already supports device unlock using either a user-selected passcode or a fingerprint. The
 device could very well support a two-step two-factor authentication scheme if
 desired. However, it is easy to understand why users would balk at having to
-enter a passcode \emph{and} provide a fingerprint each time they want to unlock their phone.
+enter a passcode /and/ provide a fingerprint each time they want to unlock their phone.
 
 ** One-step, multi-factor authentication
 
@@ -164,7 +166,7 @@ cite:curranpassthoughts was the first to merge in-ear EEG with passthought authe
  using a modified consumer grade EEG device with a single electrode, achieving approximately 80 percent authentication accuracy. 
 Ongoing work from the same authors investigates the use of custom-fit earbuds with multiple embedded electrodes \ref{fig:earbud}.
 Lending credibility to that study's claim that in-ear EEG could one day become feasible in consumer devices,
-United Sciences recently announced a consumer "hearable'' (in-ear wearable) called The Aware, which will measure EEG from the ear, among other biometrics cite:UnitedSciences.
+United Sciences recently announced a consumer "hearable'' (in-ear wearable) called The Aware, which will measure EEG from the ear, among other biometrics.
 
 ** Contending with mind-reading machines
 
@@ -182,31 +184,13 @@ Now, when people decide to buy sensor-equipped consumer devices cite:Stables2016
 
 If people /think/ a certain technology measures aspects of mind, it will certainly affect the way they engage with that technology - whether or not it works the way they expect cite:Ali2014a. Meanwhile, if they think that a given technology does /not/ measure their mind, when it fact it does, users may suffer a breach of what Nissenbaum might call the ``appropriateness of the flow of information'' cite:Doyle2011. In both cases, knowing what people expect will help us anticipate their needs, and concerns.
 
-Crucially, there are some people who actually /want/ their minds measured, e.g. for self-reflection. Consider the Spire, a breath sensor that claims to divine, from a person's patterns of in-breaths and out-breaths, what the user is calm, focused, or tense cite:SpireInc. 
+Crucially, there are some people who actually /want/ their minds measured, e.g. for self-reflection. Consider the Spire, a breath sensor that claims to divine, from a person's patterns of in-breaths and out-breaths, what the user is calm, focused, or tense.
 For the device to ``work,'' not only must these detected signals match with end-users' intuitions, but users must also believe that a device like the Spire has the power to measure and detect these phenomena, given breath as input cite:Ali2014a. 
 In general, technologies that claim to ``measure the mind'' must rely on end-users to define the criteria by which systems are deemed effective, or accurate. 
 
 If we wish to understand what role passthought authentication /could/ play in day-to-day life,
 we must view it both through the lens of potential privacy concerns, /and/ through the lens of possible opportunities for self-reflection and self-understanding. 
 Of course, users' attitudes will not be fixed: they will evolve over time, as users observe the device in action, and correlate its judgments with their own lived experiences cite:Nafus2016.
-
-* Diversity and crackability of passthoughts
-
-To transition from the lab to the real world,
-passthoughts studies must collect larger, and more diverse corpora of EEG data.
-While past work on passthoughts has achieved excellent results on corpora of recordings from different users, 
-these studies do not consider passthoughts from a variety of different subject conditions.
-For example, sitting subjects may have different patterns of neural activity from subjects who are standing, walking or exercising cite:Thibault2016a,
-let alone subjects who are under the influence of caffeine, alcohol or marijuana.
-
-Relatedly, these studies do not systematically investigate how these recordings relate statistically to non-passthoughts.
-That is, we do not know how the particular passthoughts observed in past work are drawn from the distribution of EEG signals that an individual produces over the course of their day.
-This blind-spot poses a possible challenge to passthought's vulnerability to dictionary-style cracking.
-If I have a large enough corpus of EEG readings, do some passthoughts start to look as guessable as /password1234/?
-By answering such questions, we could design data-driven policies for, e.g., how many retry attempts passthought authenticators should allow.
-Investigating this question could also help us understand how and why passthoughts work at all: Why are passthoughts unique, and how unique are they?
-
-# _OUTLInE WHAT THIS SECTION DOES...................._
 
 * User Perceptions of EEG
 
@@ -239,9 +223,31 @@ The following section describes one exploratory study that could investigate som
 # intro to problem
 # perceptions of brainwave lit
 
+* Diversity and crackability of passthoughts
+
+To transition from the lab to the real world,
+passthoughts studies must collect larger, and more diverse corpora of EEG data.
+While past work on passthoughts has achieved excellent results on corpora of recordings from different users, 
+these studies do not consider passthoughts from a variety of different subject conditions.
+For example, sitting subjects may have different patterns of neural activity from subjects who are standing, walking or exercising cite:Thibault2016a,
+let alone subjects who are under the influence of caffeine, alcohol or marijuana.
+
+Relatedly, these studies do not systematically investigate how these recordings relate statistically to non-passthoughts.
+That is, we do not know how the particular passthoughts observed in past work are drawn from the distribution of EEG signals that an individual produces over the course of their day.
+This blind-spot poses a possible challenge to passthought's vulnerability to dictionary-style cracking.
+If I have a large enough corpus of EEG readings, do some passthoughts start to look as guessable as /password1234/?
+By answering such questions, we could design data-driven policies for, e.g., how many retry attempts passthought authenticators should allow.
+Investigating this question could also help us understand how and why passthoughts work at all: Why are passthoughts unique, and how unique are they?
+
+# _OUTLInE WHAT THIS SECTION DOES...................._
+
 * Two studies on passthoughts
 
 This section proposes two studies on passthought authentication.
+One study, a controlled, lab-based experiment, seeks to raise fundamental questions about how the feedback fo a real-time authentication system may affect the performance of passthoughts.
+It also begins to address certain, limited questions around the shifting nature of neural signals.
+The second study, a longitudinal deployment, seeks to collect a large and diverse corpus of EEG signals, while probing people's beliefs and attitudes about EEG and brainscanning in everyday life.
+Together, the findings of these proposed studies could serve as a starting point for addressing the major questions raised in the prior sections.
 
 ** A real-time passthought authenticator
 
@@ -355,8 +361,8 @@ These cracking experiments could lead to defenses against cracking attempts, by 
 *** Usability and attitudes
 
 By deploying a real sensing apparatus, be it a traditional consumer device such as the Muse cite:Mihajlovic2015 
-or a more experimental piece of equipment such as an earbud cite:UnitedSciences, 
-and having people record EEG data in their daily life, we could learn more about the interpretative qualities of these data  cite:NafusDawn;Sherman2014.
+or a more experimental piece of equipment such as an earbud,
+and having people record EEG data in their daily life, we could learn more about the interpretative qualities of these data cite:NafusDawn;Sherman2014.
 Such a study presents a dual opportunity to understand user beliefs in a rich, qualitative sense, while simultaneously collecting the large, diverse and longitudinal corpus of EEG signals necessary if we wish to stand a chance at decent classification accuracy in the wild.
 
 Of course, this study is no substitute for a working, online passthoughts authentication system.
@@ -491,7 +497,8 @@ along with some of the most pressing anxieties:
 What does pervasive physiological recording mean for our privacy, security, safety? 
 The balancing act between these risks and opportunities will prove recurring theme for decades to come.
 In the meantime, probing the outer limits of ubiquitous, pervasive sensing can shed light on both the good and bad that our near future may bring.
+cite:Gaver1999
+
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{refs}
-
