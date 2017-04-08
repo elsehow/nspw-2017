@@ -23,22 +23,20 @@ Possession of tokens or keys are susceptible to loss,
 and the use of multiple factors (such as password and SMS) require multiple steps, hindering wider adoption.
 
 First proposed by cite:Thorpe2005, ``passthoughts'' authentication allow users to 
-to submit both a knowledge factor (i.e., secret thought) and an inherence factor (i.e., brainwave signal unique to the individual) 
+to submit both a knowledge factor (i.e., secret thought) and an inherence factor (i.e., the unique way that thought is expressed)
 in a single step, by performing a single mental task.
-Since this original proposal, passthoughts has been validated in a controlled environment using consumer-grade devices cite:Chuang2013b, 
-and using in-ear EEG earbuds cite:curranpassthoughts.
-cite:Johnson2014 showed this protocol to be robust against impersonation attacks, even when the attack has learned the target's secret thought.
+Since its original proposal, passthoughts has been validated in lab settings, even with 
+consumer-grade devices cite:Chuang2013b and in-ear EEG earbuds cite:curranpassthoughts.
+The protocol appears to be robust against impersonation attacks, validating that it provides two factors of authentication cite:Johnson2014.
 # passthoughts have no visible ``tell,'' making them impervious to shoulder surfing attacks.
 
 While recent work is heartening, passthoughts remains confined, for now, to the lab.
 This paper reviews the immediate questions that must be addressed if passthoughts is to move into everyday life.
-
 First, we must understand the real usability properties of passthoughts.
 While much work has claimed passthoughts to be more usable than traditional multi-factor authentication protocols,
 as of yet, no work systematically evaluates this claim.
 The usability of passthoughts authentication will depend not only on its performance in ecologically valid contexts,
 but also on people's attitudes about brainwaves, EEG, and biosensing generally (Section 3).
-# Past work indicates that people believe EEG can reveal what someone is thinking or feeling, which could scare off wider adoption 
 Second, we must test passthoughts in a variety of conditions: ambulatory settings, under different levels of stress, drowsiness, caffeine or alcohol, etc.
 This statistical analysis will help us understand how passthoughts change over time.
 It will also help us understand the space of possible passthoughts (Section 4).
