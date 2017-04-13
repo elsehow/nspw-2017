@@ -1,0 +1,37 @@
+#+options: toc:nil
+#+LATEX_HEADER: \usepackage[margin=1in]{geometry}
+#+Title: Cover letter
+
+The authors of this submission are Nick Merrill, Max T Curran, and John Chuang. 
+All are affiliated with BioSENSE, UC Berkeley School of Information, Berkeley, California, USA.
+
+* Attendance statement
+
+Nick Merrill will attend the workshop if invited.
+
+* Submission category
+
+This submission is a regular paper.
+
+* Justification statement
+# -fly explain why the submission is appropriate for NSPW, and 
+# -arize the new paradigm, perspective, or position. 
+The concept of /passthought authentication/, in which a user thinks a secret thought to log in to services or devices, was first proposed at NSPW 2005.
+In the intervening years, numerous studies have provided empirical evidence that such a system could work, at least in theory.
+
+Whereas the original proposal by Thorpe (2005) suggested theoretical benefits to passthoughts authentication,
+this paper discusses the practical challenges that passthoughts currently faces.
+These challenges are contextualized and explained, and two specific studies are proposed in response.
+
+
+Despite this paper's grounding in immediate challenges,
+our aim is not simply to propose solutions.
+Rather, we seek to use these challenges as an anchoring point for discussions about possibilities for authentication generally.
+After all, passthoughts is interesting not only for its multi-factor, one-step authentication, but also because it begs the question: What makes you /you/?
+How can knowledge and inherence overlap, interact?
+In our discussion, we outline future directions in which passthoughts could push against the boundaries of what authentication is expected to accomplish.
+This discussion touches on topics ranging from ``organic passwords'' (passwords that change naturally over time),
+to authentication that fails when the user is intoxicated,
+to possible contributions to neuroscience and brain-computer interfaces.
+We hope the work presented here will generate fruitful discussion about 
+what authentication can and should be able to do in the coming years.

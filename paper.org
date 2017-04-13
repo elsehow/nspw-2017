@@ -62,7 +62,7 @@ e.g. for people with motor disabilities cite:Mattia2013.
 Passthoughts is not without risks (Section 6),
 but, if future work can address the two challenges posed here, several interesting paths unfurl.
 closed-loop authentication, continuous and/or tacit authentication, 
-and possible theoretical contributions to neuroscience, authentication and HCI (Section 7).
+and possibly novel contributions to authentication more broadly (Section 7).
 
 * Background
 
@@ -216,8 +216,6 @@ Will people shy away from using their passthought authenticator in certain situa
 #+caption: ``Please rank the following sensors in how likely you believe they are to reveal what a person is thinking and feeling.'' Mean Likert responses (Not at all...Very informative). Lower bars mean higher rank (1 being the highest-ranked,  or most likely to reveal what one is thinking or feeling.''
 \label{fig:rank}
 [[./figures/rankings.png]]
-
-
 
 * Diversity and security of passthoughts
 
