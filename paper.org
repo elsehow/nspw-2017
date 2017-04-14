@@ -31,6 +31,11 @@ consumer-grade devices cite:Chuang2013b and in-ear EEG earbuds cite:curranpassth
 The protocol appears to be robust against impersonation attacks, validating that it provides two factors of authentication cite:Johnson2014.
 # passthoughts have no visible ``tell,'' making them impervious to shoulder surfing attacks.
 
+
+#+caption: A passthought authenticator.
+\label{fig:diagram}
+[[./figures/passthoughts-diagram.png]]
+
 While recent work is heartening, passthoughts remains confined, for now, to the lab.
 This paper reviews the immediate questions that must be addressed if passthoughts is to move into everyday life.
 First, we must understand the real usability properties of passthoughts.
@@ -39,35 +44,33 @@ as of yet, no work systematically evaluates this claim.
 The usability of passthoughts authentication will depend not only on its performance in ecologically valid contexts,
 but also on people's attitudes about brainwaves, EEG, and biosensing generally (Section 3).
 Second, we must test passthoughts in a variety of conditions: ambulatory settings, under different levels of stress, drowsiness, caffeine or alcohol, etc.
-This statistical analysis will help us understand how passthoughts change over time.
-It will also help us understand the space of possible passthoughts (Section 4).
+This statistical analysis will help us understand 
+the space of possible passthoughts,
+and how passthoughts change over time (Section 4).
 # It will also help us estimate how easy or difficult passthoughts are to guess, or crack (Section 4).
 # Through this work, we may build a better understanding of the statistical distribution of EEG signals that a person gives off during the course of their life. 
 
+This paper motivates and contextualizes two studies that could begin to address these challenges (Section 5).
+While these studies attack two sides of passthoughts' chances as a real-world technology
+this study serves not just to propose solutions, but to raise questions about what authentication could and should be able to do.
+While passthoughts is not without risks (Section 6),
+it raises the possiblity for several interesting paths,
+including exploration of systems that could enable novel types of authentication (Section 7).
 
-#+caption: A passthought authenticator.
-\label{fig:diagram}
-[[./figures/passthoughts-diagram.png]]
+# The first study focuses on the use of passthoughts in a realistic, though lab-constrained setting, 
+# allowing a first look at how passthoughts might work in a real-time application context.
+# The second proposed study focuses on people's longitudinal relationships with EEG in their everyday life,
+# focusing not on behavioral differences experimental conditions, but on evolving attitudes (and signals) over longer timescales,
+# allowing assessment of both dynamic user attitudes, and the possible impact of shifting neural signals.
 
-The main goal of this paper is to motivate and contextualize studies that can begin to address these challenges (Section 5).
-The first study focuses on the use of passthoughts in a realistic, though lab-constrained setting, 
-allowing a first look at how passthoughts might work in a real-time application context.
-The second proposed study focuses on people's longitudinal relationships with EEG in their everyday life,
-focusing not on behavioral differences experimental conditions, but on evolving attitudes (and signals) over longer timescales,
-allowing assessment of both dynamic user attitudes, and the possible impact of shifting neural signals.
-
-Passthought authentication stands a chance at becoming the first brain-computer interface to reach wider adoption. 
-As such, passthoughts promises not only more usable multi-factor authentication,
-but also a source of data for future development of EEG-based brain-computer interfaces
-e.g. for people with motor disabilities cite:Mattia2013.
-Passthoughts is not without risks (Section 6),
-but, if future work can address the two challenges posed here, several interesting paths unfurl.
-closed-loop authentication, continuous and/or tacit authentication, 
-and possibly novel contributions to authentication more broadly (Section 7).
+# Passthought authentication stands a chance at becoming the first brain-computer interface to reach wider adoption. 
+# As such, passthoughts promises not only more usable multi-factor authentication,
+# but also a source of data for future development of EEG-based brain-computer interfaces
+# e.g. for people with motor disabilities cite:Mattia2013.
 
 * Background
 
-Authentication is the act of proving that a user is who they claim to be.
+Authentication seeks to prove that a user is who they claim to be.
 In computer security, authenticators are classified into three types: knowledge factors (e.g., passwords
 and PINs), possession factors (e.g., physical tokens, ATM cards), and inherence
 factors (e.g., fingerprints and other biometrics). 
