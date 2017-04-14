@@ -1,5 +1,6 @@
 #+options: toc:nil
 #+LATEX_HEADER: \usepackage[margin=1in]{geometry}
+#+Author:
 #+Title: Cover letter
 
 The authors of this submission are Nick Merrill, Max T Curran, and John Chuang. 
