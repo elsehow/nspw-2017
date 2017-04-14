@@ -9,7 +9,6 @@
 #+LATEX_HEADER: \acmYear{2017}
 #+LATEX_HEADER: \copyrightyear{2017}
 #+LATEX_HEADER: \acmPrice{15.00}
-#+LATEX_HEADER: \usepackage{lmodern}
 #+TITLE:  Is the Future of Authenticity In Our Heads?
 #+Author: 
 #+SUBTITLE: Moving Passthoughts From the Lab to the World
@@ -32,12 +31,13 @@ The protocol appears to be robust against impersonation attacks cite:Johnson2014
 # passthoughts have no visible ``tell,'' making them impervious to shoulder surfing attacks.
 
 
-#+caption: A passthought authenticator.
+#+caption: Challenges moving passthought authentication from the lab to the real world.
 \label{fig:diagram}
 [[./figures/passthoughts-diagram.png]]
 
+
 While recent work is heartening, passthoughts remains confined, for now, to the lab.
-This paper reviews the immediate questions that must be addressed if passthoughts is to move into everyday life.
+This paper reviews the immediate questions that must be addressed if passthoughts is to move into everyday life \ref{fig:diagram}.
 First, we must understand the real usability properties of passthoughts.
 The usability of passthoughts authentication will depend not only on its performance in ecologically valid contexts,
 but also on people's attitudes about brainwaves, EEG, and biosensing generally (Section 3).
@@ -416,7 +416,7 @@ When transferring authentication credentials in passthoughts, the ability to sno
 There is also the question of the security of data infrastructures in which EEG data might be stored.
 Large data repositories are what Wolf cite:Wolf2010 calls a ``toxic asset''; they must be maintained, 
 lest the maintainer take liability for harmful fallout of poor data management.
-With biosignals, as with many kinds of data, it is not clear what they might mean until they are already collected in aggregate. 
+With biosignals, it is not always clear what they might mean until they are already collected in aggregate. 
 By then, it is too late to decide on an appropriate data security policy.
 
 Strong encryption policies should be built into collection systems from the very beginning, 
