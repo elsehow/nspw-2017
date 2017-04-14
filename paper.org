@@ -58,7 +58,7 @@ it raises the possiblity for several interesting paths,
 including exploration of systems that could enable novel types of authentication (Section 7).
 
 # The first study focuses on the use of passthoughts in a realistic, though lab-constrained setting, 
-# allowing a first look at how passthoughts might work in a real-time application context.
+
 # The second proposed study focuses on people's longitudinal relationships with EEG in their everyday life,
 # focusing not on behavioral differences experimental conditions, but on evolving attitudes (and signals) over longer timescales,
 # allowing assessment of both dynamic user attitudes, and the possible impact of shifting neural signals.
@@ -217,7 +217,7 @@ Will people shy away from using their passthought authenticator in certain situa
 
 
 #+ATTR_LATEX: :float multicolumn
-#+caption: ``Please rank the following sensors in how likely you believe they are to reveal what a person is thinking and feeling.'' Mean Likert responses (Not at all...Very informative). Higher bars indicate higher rank, or more likely to reveal what one is thinking or feeling.''
+#+caption: ``Please rank the following sensors in how likely you believe they are to reveal what a person is thinking and feeling.'' Higher bars indicate higher rank, or more likely to reveal what one is thinking or feeling.''
 \label{fig:rank}
 [[./figures/rankings.png]]
 
@@ -475,15 +475,15 @@ This feature could improve security, as an attacker able to compromise a passtho
 unless they are able to realistically mutate the signal over authentication attempts.
 This feature of EEG also gives passthoughts a possible advantage over other methods for behavioral authentication, such as voice or keystroke dynamics cite:Monrose1997, which may change more slowly for individuals, if they change at all.
 Future work should investigate this claim, perhaps using a longitudinal corpus such as the one described above.
-** Neuroscience of authentication
+** Authentication and the self
 
 Where authenticity is nominally concerned with proving that you are who you say you are,
 a less-frequently-asked question in the authentication literature is,
 ``are you really yourself?''
 We all sometimes do or say regrettable things when we are feeling ``not quite ourselves,'' sometimes using devices or services with which we have authenticated ourself.
-Can authentication ever verify not only your posession of your body, but of your ``right mind''?
+Can authentication ever verify not only your possession of your body, but of your ``right mind''?
 
-A question raised earlier surrounds wehre passthoughts could still work if a person is drunk, having a migraine, or in distress (Section 3). 
+A question raised earlier surrounds where passthoughts could still work if a person is drunk, having a migraine, or in distress (Section 3). 
 Even if passthoughts fails when a user is in such an ``off-baseline'' state, 
 passthoughts still may have utility (perhaps even /added/ utility) in certain authentication contexts.
 For example, one may wish to allow themselves access to certain resources (e.g. bank accounts) when one's resting EEG state is not too much different from a pre-recorded baseline.
@@ -492,7 +492,8 @@ Such a scenario raises serious ethical, legal, and even philosophical questions.
 How does such a system conform to accepted definitions of a ``person''?
 Who is a person to make decisions for their future self?
 What are possible vectors for abuse?
-In any case, this property of an authentication is, as far as I am aware, novel, and should be considered as we learn more about the strengths, weaknesses, and particular affordances of this still-novel method for authentication.
+In any case, this property of an authentication is, as far as we are aware, novel, 
+and should be considered as we learn more about the strengths, weaknesses, and particular affordances of this developing method for authentication.
 # Point out the necessity for this sort of data to be collected and analyzed to establish how different “drunk” & “caffeinated” EEG patterns are from “baseline” ones. Does this exist in some form in other literature? Neurology for example?
 ** Passthoughts by any other sensor?
 
