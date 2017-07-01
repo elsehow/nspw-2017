@@ -55,9 +55,9 @@ Do these changes make passthoughts less appealing compared to other authenticati
 This paper aims both to re-validate passthought's promise as an authentication paradigm (Section 2), and to 
 motivate and contextualize two studies that could begin to address the challenges posed above (Section 5).
 While passthoughts is not without risks (Section 6),
-it raises the possiblity for several interesting paths,
-including exploration of systems that could enable novel types of authentication (Section 7).
-We conclude discuss how passthoughts pushes the boundaries of what authentication could and should be able to do.
+it could lead to novel /types/ of authentication,
+which challenge (or at least destabilize) dominant assumptions about what authentication 
+can and should be able to do. (Section 7).
 
 # The first study focuses on the use of passthoughts in a realistic, though lab-constrained setting, 
 
@@ -455,6 +455,8 @@ However, future work will need to address these issues if we are to balance user
 This paper so far has motivated two future studies on passthoughts,
 and discussed potential risks intrinsic to the development of passthoughts systems.
 With these risks in mind, the present section explores some of the exciting possibilities that could unfold after the immediate priorities described in the prior sections.
+Through the lens of passthoughts, we hope to use this discussion as an opportunity to challenge (or at least destabilize) dominant assumptions in authentication.
+
 # Such a study could shed light both on behavioral and privacy aspects around passthoughts as a specific brain-computer interface, while simultaneously assisting efforts to build more robust features, models and classifiers. 
 
 ** Continuous authentication
