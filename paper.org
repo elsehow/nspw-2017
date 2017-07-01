@@ -48,12 +48,16 @@ and how passthoughts change over time (Section 4).
 # It will also help us estimate how easy or difficult passthoughts are to guess, or crack (Section 4).
 # Through this work, we may build a better understanding of the statistical distribution of EEG signals that a person gives off during the course of their life. 
 
-This paper motivates and contextualizes two studies that could begin to address these challenges (Section 5).
-While these studies attack two sides of passthoughts' chances as a real-world technology
-this study serves not just to propose solutions, but to raise questions about what authentication could and should be able to do.
+In addition, computing broadly has undergone many sea changes since passthought's initial proposal in 2005.
+Biosensing (the sensing of humans) has proliferated throughout our everyday life, due both to the sensors ubiquitous in smartphones, and to general improvements to infrastructures of data collection and machine learning at scale. 
+Do these changes make passthoughts less appealing compared to other authentication strategies that these "sea changes" have made possible? 
+
+This paper aims both to re-validate passthought's promise as an authentication paradigm (Section 2), and to 
+motivate and contextualize two studies that could begin to address the challenges posed above (Section 5).
 While passthoughts is not without risks (Section 6),
 it raises the possiblity for several interesting paths,
 including exploration of systems that could enable novel types of authentication (Section 7).
+We conclude discuss how passthoughts pushes the boundaries of what authentication could and should be able to do.
 
 # The first study focuses on the use of passthoughts in a realistic, though lab-constrained setting, 
 
@@ -89,13 +93,13 @@ device could very well support a two-step two-factor authentication scheme if
 desired. However, it is easy to understand why users would balk at having to
 enter a passcode /and/ provide a fingerprint each time they want to unlock their phone.
 
-** One-step, multi-factor authentication
-
 To assist with the usability issues surrounding multi-factor authentication,
 passthoughts aims to provide two factors of authentication in a single step.
 A single mental task, or passthought, provides both a knowledge factor (a chosen secret thought)
 with an inherence factor (the way that thought is expressed for an individual) cite:Chuang2013b,Johnson2014.
 Using a custom sensing device, passthoughts could provide an additional posession factor, all in the same step.
+
+** One-step, multi-factor authentication
 
 # This section describes how ``passthought'' authentication has been used to provide
 # one-step, three-factor authentication. 
