@@ -99,25 +99,30 @@ A single mental task, or passthought, provides both a knowledge factor (a chosen
 with an inherence factor (the way that thought is expressed for an individual) cite:Chuang2013b,Johnson2014.
 Using a custom sensing device, passthoughts could provide an additional posession factor, all in the same step.
 
+
 ** One-step, multi-factor authentication
 
 # This section describes how ``passthought'' authentication has been used to provide
 # one-step, three-factor authentication. 
 # Furthermore, passthoughts are resistant to spoofing attacks...............andhard to describe to othersk
 
-Other work has attempted to provide multiple factors of authentication in one step.
+Since passthought's initial proposal in 2005,
+more ubiquitous sensing and computing has enabled a number of other strategies for achieving two factors of authentication in a single step. 
 Some work has tested behavioral authentication methods such as keystroke dynamics, or voice. In both cases, the knowledge factor (password or passphrase) and
 inherence factor (typing rhythm or speaker's voice) are employed cite:Monrose1997.
 In contrast, the Nymi band supports one-step two-factor authentication via the inherence
 factor (cardiac rhythm that is supposed to be unique to each individual) and the
 possession factor (the wearing of the band on the wrist) cite:Nymi.
-Custom-built EEG devices could incorporate an added possession factor 
-to the already two-step authentication provided by passthoughts cite:Curran2017.
+More recent attempts have also used gait (from cellphone accelorometers) to perform authentication cite:UnifyID2017.
+# Custom-built EEG devices could incorporate an added possession factor 
+# to the already two-step authentication provided by passthoughts cite:Curran2017.
 
-Authenticators are susceptible to a variety of attacks. 
-One common attack on passwords is ``shoulder surfing,'' in which an attack uses visual or other cues to steal, or improve the chances of guessing, a target's chosen secret. 
-Passthoughts mitigates this attack by nature of the mental gesture:
-since the expression of a passthought is not externally visible, the authenticator is impervious to shoulder surfing attacks.
+However, these existing strategies are susceptible to a variety of attacks. 
+Nymi, for example, does not have a knowledge factor, making it impossible for the user to change the authentication token if the device and biosignal have been compromised.
+Keystroke dynamics, voice, and gait are all susceptable to ``shoulder surfing,'' in which an attack uses visual or other cues to steal, or improve the chances of guessing, a target's chosen secret. 
+Passthoughts mitigates this attack by nature of the mental gesture.
+Since the expression of a passthought is not externally visible, the authenticator is impervious to shoulder surfing attacks.
+Since the thought a chosen secret (knowledge factor), it can be changed if compromised. 
 
 # Authentication protocols are often susceptible to a so-called /rubber-hose attack/, in which users are coerced into giving up their chosen secret (e.g. password), biometric, or unique token, voluntarily or not cite:Bojinov2012,Martinovic2012. This attack is particularly effective against protocols that rely only on inherence factors, as inherent traits such as fingerprints are difficult to change without costly repercussions cite:Spielberg2002. One defense against such an attack is /tacit authentication/, in which the user does not know exactly how s/he performs the authenticating action.
 
