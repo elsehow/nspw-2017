@@ -1,4 +1,4 @@
-% Created 2017-07-03 Mon 10:49
+% Created 2017-07-03 Mon 12:23
 % Intended LaTeX compiler: pdflatex
 \documentclass[sigconf]{acmart}
 \usepackage[utf8]{inputenc}
@@ -37,7 +37,7 @@
 \maketitle
 
 \section{Introduction}
-\label{sec:orgf1c0eda}
+\label{sec:orge209717}
 
 Usable authentication is a long-standing problem in computer security.
 Traditional passwords are easy to guess and difficult to remember,
@@ -83,7 +83,7 @@ which challenge (or at least destabilize) dominant assumptions about what authen
 can and should be able to do. (Section 7).
 
 \section{Background}
-\label{sec:org6b9dd4a}
+\label{sec:org6827efb}
 
 Authentication seeks to prove that a user is who they claim to be.
 In computer security, authenticators are classified into three types: knowledge factors (e.g., passwords
@@ -114,7 +114,7 @@ Using a custom sensing device, passthoughts could provide an additional posessio
 
 
 \subsection{One-step, multi-factor authentication}
-\label{sec:org526fbba}
+\label{sec:orgffe92dc}
 
 Since passthought's initial proposal in 2005,
 more ubiquitous sensing and computing has enabled a number of other strategies for achieving two factors of authentication in a single step. 
@@ -133,7 +133,7 @@ Since the expression of a passthought is not externally visible, the authenticat
 Since the thought a chosen secret (knowledge factor), it can be changed if compromised. 
 
 \subsection{Passthought authentication}
-\label{sec:org6b3c69e}
+\label{sec:org93d707a}
 
 The use of EEG as a biometric signal for user authentication has a short history.
 In 2005, Thorpe et al. motivated and outlined the design of a passthoughts system \cite{Thorpe2005}. Since 2002, a number of independent groups have achieved low (less than 1\%) false acceptance rates using multi-channel sensors placed on the scalp \cite{Poulos2002,Marcel2007a,Palaniappan2008,Ashby2011}.
@@ -151,7 +151,7 @@ factor authentication via the simultaneous presentation of the inherence factor
 knowledge factor (the secret mental task) \cite{Chuang2014}.
 
 \subsection{Passthoughts using in-ear EEG}
-\label{sec:org0f217d8}
+\label{sec:org09042b7}
 
 Even consumer-grade headsets can be uncomfortable to wear, and are awkwardly visible to outside observers. 
 Earbuds present a more discreet, comfortable location for an EEG sensor, as earbuds are already commonly worn.
@@ -184,7 +184,7 @@ Lending credibility to that study's claim that in-ear EEG could one day become f
 United Sciences recently announced a consumer "hearable'' (in-ear wearable) called The Aware, which will measure EEG from the ear, among other biometrics.
 
 \section{User attitudes and perceptions}
-\label{sec:org0009958}
+\label{sec:orgdbbbb66}
 
 While past work makes passthoughts less visible with more discreet form-factors,
 a large question still remains:
@@ -197,7 +197,7 @@ Will these attitudes scare away, or attract wider adoption?
 This section outlines common concerns around ``mind-reading'' machines, and how they relate to EEG and passthoughts specifically.
 
 \subsection{Contending with mind-reading machines}
-\label{sec:org5b8dcbd}
+\label{sec:org45e1492}
 
 Biosensing devices in general raise many questions about privacy for end-users,
 typically around the meaning of the data produced by particular devices.
@@ -220,7 +220,7 @@ In the next section, discuss how EEG as a sensing modality motivates questions a
 
 
 \subsection{What (do you think) EEG can reveal about a person?}
-\label{sec:orga19eaac}
+\label{sec:org6df83c3}
 
 The survey we report on here, currently in-progress, examines how people's beliefs differ given device ownership, and their membership in one of two groups: Mechanical Turk workers, or people enrolled in Health-e-Heart, a massive (n > 40,000), longitudinal study, in which volunteers fill out surveys about themselves, and/or upload data from biomedical self-tracking devices, over the course of several years \cite{Estrin2010a}.
 In one portion of the survey, we ask subjects to rate a number of different biosensors in order of how likely individual's believe each sensor is to reveal what ``a person is thinking or feeling'' (Figure \ref{fig:rank}).
@@ -238,8 +238,73 @@ Will people shy away from using their passthought authenticator in certain situa
 \caption{``Please rank the following sensors in how likely you believe they are to reveal what a person is thinking and feeling.'' Higher bars indicate higher rank, or higher likelihood of being revealing.}
 \end{figure*}
 
+Our qualitative data revealed that subjects in both groups generally believed EEG to reveal various details about the mind, mood, emotions, and identity.
+We asked subjects to reflect on why they answered the way they did during the ranking task (Figure \ref{fig:rank}).
+In the Health-e-Heart group, several subjects gave relatively specific explanations as to why they ranked EEG hihgly.
+
+\begin{quote}
+\emph{(S24) I assume some information can be gleaned from brain wave activity in various parts of the brain related to rewards or executive control, but without accompanying information, it may be difficult to discover my thoughts.}
+\end{quote}
+
+\begin{quote}
+\emph{(S23) EEGs note parts of the brain that are active.  Again, in conjunction with other measurements, I suspect that some sense of what one is thinking and feeling could be learned.}
+\end{quote}
+
+\begin{quote}
+\emph{(S91) I would rate this relatively high on the list because science has shown that we can detect a lot about which areas of the brain are accessed and at which times.  This can tell a person a lot about what they might be thinking and especially how they are feeling.}
+\end{quote}
+
+While these explanations range somewhat in their specificity and confidence,
+they share the general sentiment that EEGs can be revealing. Subjects in the Mechanical Turk condition broadly shared this belief, though tended to use less physiological detail in their explanations.
+
+\begin{quote}
+\emph{(S157) Brain activity can pinpoint exact emotions by monitoring certain areas on the brain.}
+\end{quote}
+
+\begin{quote}
+\emph{(S130) Brainwaves could tell you a lot more about what someone is thinking and feeling. You could measure the patterns of brainwaves in an experiment.}
+\end{quote}
+
+Meanwhile, some subjects from both groups did not fit this trend. Ten subjects ranked EEG low in its ability to measure what a person is thinking or feeling. Their qualitative answers revealed a diverse set of reasons for this ranking.
+Three subjects indicated a general lack of faith in brainwave's reliabilty.
+
+\begin{quote}
+\emph{(S20) I don't think we have the ability to translate brainwaves into thoughts or emotions.}
+\end{quote}
+
+\begin{quote}
+\emph{(S101) EEG is very nonspecific and rarely can tell details reliably.}
+\end{quote}
+
+\begin{quote}
+\emph{(S138) Possible but not accurate.}
+\end{quote}
+
+These explanations broadly centered around EEG as a signal.
+They range somewhat in their confidence, from a fundamental skepticism (S20) to caveats about possible accuracy or specificity (S101, S138).
+In contrast to these three subjects, S10 ranked EEG low because s/he
+felt the premise of a consumer grade EEG was implausible.
+
+\begin{quote}
+\emph{(S10) I assume that scientists can identify by brain patterns what others are feeling and thinking based off of years of research.  I've never heard of a consumer grade eeg - and doubt it could be as powerful as a laboratory eeg.  If it is then I would be interested in this product.}
+\end{quote}
+
+This subject's explanation surfaces the practical differences in attitudes that people might have to a technology's theoretical existence,
+and its realized existence as a consumer device. Future work could look more closely at 
+how the presumed scientific authority of a brainscanning apparatus affects people's willingness to accept specific BCI applications such as passthoughts \cite{Ali2014a}.
+Finally, one subject's skepticism what brainwaves can reveal stemmed from his/her personal medical experiences.
+
+\begin{quote}
+\emph{(S116) My son has absence seizures, so his brainwaves change.}
+\end{quote}
+
+This quote highlights how individuals' life experiences
+might shape the way they engage (or refuse to engage) with brain-sensing devices.
+In general, this quote and others motivate the need for a rich, qualitative understanding of people's first-hand experiences with brainscanning devices,
+as well as data collection,
+in order to understand what role BCI applications such as passthoughts could play in day-to-day life.
 \section{Diversity and security of passthoughts}
-\label{sec:org4fff047}
+\label{sec:org3330c22}
 
 While the previous section outlined questions around user attitudes, empirical questions about passthoughts, as signals, also linger.
 This section outlines and motivates the major quantitative questions that have not been fully answered by past work on passthoughts.
@@ -255,14 +320,14 @@ A primary question in passthoughts surrounds how large the real space of possibl
 While the space of possible passthoughts is potentially unlimited, we do not yet know what passthoughts we stand a reasonable chance at observing consistently over time.
 A larger corpus of data might help shed light on this issue by allowing us to observe the distribution of signals that people produce over time.
 
-A more subtle, but closely related question surrounds how passthought EEG recordings relate statistically to non-passthought EEG recordings.
+A more subtle, but related question surrounds how passthought EEG recordings compare to non-passthought EEG recordings.
 In other words, we do not know how the particular passthoughts observed in past work are drawn from the distribution of EEG signals that an individual produces over the course of their day.
 This blind-spot poses a possible challenge to passthought's vulnerability to dictionary-style cracking.
 If an attacker has a large enough corpus of EEG readings, do some passthoughts start to look as guessable as \emph{password1234}?
 By answering such questions, we could design data-driven policies for, e.g., how many retry attempts passthought authenticators should allow.
 
 \section{Two studies on passthoughts}
-\label{sec:org9bd76c2}
+\label{sec:org7ca404f}
 
 The prior two sections raise two main topics that future work could address. 
 First, our limited understanding of passthoughts' usability, and user attitudes about the sensing modality present immediate questions for further development of this technology.
@@ -276,7 +341,7 @@ The second study, a longitudinal deployment, seeks to collect a large and divers
 Together, these studies address both long-term concerns about user attitudes and signal diversities, and also short-timescale questions about the usability and accuracy of passthoughts in realistic use scenarios.
 
 \subsection{A real-time passthought authenticator}
-\label{sec:org65e0cf5}
+\label{sec:orgf20bd64}
 
 Passthoughts promise more usable form multi-factor authentication compared to existing protocols,
 as they provide both a knowledge and an inherence factor in a single-step user action.
@@ -284,7 +349,7 @@ However, no study yet has systematically evaluated passthoughts' usability.
 Here, we propose a study aimed at examining passthoughts' usability in an ecologically valid context.
 
 \subsubsection{Study protocol}
-\label{sec:org0bd4853}
+\label{sec:orge48e6fe}
 
 This study would take place in a lab, under the supervision of an experimenter.
 First, the experimenter would calibrate a subject with a passthought authenticator, as in \cite{Chuang2013b}.
@@ -300,7 +365,7 @@ in which subjects are asked to recount their experience with the authenticator.
 This interview could help gain some richer, qualitative data that traditional survey methods might fail to capture.
 
 \subsubsection{The effect of feedback}
-\label{sec:org4f731b0}
+\label{sec:orgf1fddaa}
 
 Through this study, we might find 
 that passthoughts is considered usable, even when authentication attempts are always rejected.
@@ -322,7 +387,7 @@ Its results would shed light on how passthoughts change as a response to authent
 and how authenticator performance affects perceptions of passthoughts' usability on the other.
 
 \subsubsection{Exploring continuous re-calibration}
-\label{sec:orgfa27859}
+\label{sec:orgef60fad}
 
 In addition to these findings, the data generated during this study could help test 
 a third hypothesis: that the continual re-training of passthought classifiers might help boost classification performance over time,
@@ -343,7 +408,7 @@ If a user is continually rejected, and the classifier is re-trained using those 
 will the user find themselves trapped in a negative spiral of ever-decreasing authentication accuracy?
 
 \subsection{A longitudinal study on brainwave monitoring}
-\label{sec:org7ef7168}
+\label{sec:orgbea5086}
 
 The study proposed above would help answer preliminary questions about
 the usability of a passthought authenticator in a short-term context,
@@ -359,16 +424,10 @@ Unfortunately, these challenges (particularly those around shifting neural signa
 This makes a longitudinal study with a working authenticator impractical for the time being.
 However, we may still perform a longitudinal study that allows us to interrogate the usability aspects around (and attitudes about) passthoughts specifically, and EEG generally.
 In so doing, we may also collect a larger and more diverse corpus of passthoughts, which can be used to address the paucity of data we face today.
-A technology probe or diary study \cite{Gaver1999} could help address both of these issues at the same time.
-
-Of course, this study would be no substitute for a working, online passthoughts authentication system.
-Instead, this study aims to collect useful data before such a system exists.
-It will not only elicit beliefs, 
-but also allow us to collect larger datasets, 
-and to catch technical issues in sensing devices and collection platforms.
+This section describes a technology probe \cite{Gaver1999} that could help address both of these issues at the same time.
 
 \subsubsection{Study protocol}
-\label{sec:org7967cd6}
+\label{sec:org9be49e3}
 
 A small group of subjects could wear a working, recording EEG device, whether or not it provides feedback, in a variety of settings for some number of days,
 having subjects journal their experiences and asking them specifically what they feel someone might be able to know about them from the EEG signals they record.
@@ -383,7 +442,7 @@ The diverse readings encountered in day-to-day life could help us understand how
 At the same time, our user diaries and interviews could enable a rich, qualitative understanding of users attitudes.
 
 \subsubsection{A more diverse corpus}
-\label{sec:org6c1e1e9}
+\label{sec:org4f6869d}
 
 While subjects wear their EEG device and diary about their experience, we should also ask subjects to perform
 targeted mental tasks (potential passthoughts) in a variety of contexts (ambulatory, under the influence of caffeine or alcohol, etc). 
@@ -396,7 +455,7 @@ Unlabeled data represents another fruitful source of data for passthoughts.
 The unlabeled samples in this corpus also allow us to examine properties of EEG signals in general, helping us build more robust models which should help us prevent overfitting in the future.
 
 \subsubsection{The space of possible passthoughts}
-\label{sec:org9ef3205}
+\label{sec:orgb19bfc8}
 In another potentially fruitful analysis, such a corpus will allow us to perform statistical analysis of how passthoughts are drawn from the overall distribution of EEG signals. 
 Using multi-dimensional clustering algorithms such as t-SNE \cite{VanDerMaaten2008} 
 could assist us in understanding how particular passthoughts relate to other EEG signals that an individual expresses involuntarily throughout the day. 
@@ -408,7 +467,7 @@ Feeding these algorithms into pre-trained passthought classifiers, we can begin 
 These cracking experiments could lead to defenses against cracking attempts, by enforcing retry attempt timeouts or other methods for limiting break-in risk, such that strong security guarantees can be enforced.
 
 \subsubsection{Usability and attitudes}
-\label{sec:orge398ca0}
+\label{sec:org488cdca}
 
 By deploying a real sensing apparatus, be it a traditional consumer device such as the Muse \cite{Mihajlovic2015} 
 or a more experimental piece of equipment such as an earbud,
@@ -416,8 +475,24 @@ and having people record EEG data in their daily life, we could learn more about
 This study presents a dual opportunity to understand user beliefs with rich, qualitative data, 
 while simultaneously collecting the large, diverse and longitudinal corpus of EEG signals necessary if we wish to stand a chance at decent authentication accuracy in the wild.
 
+\subsubsection{Limitations}
+\label{sec:org794d9d1}
+
+This study would be no substitute for a working, online passthoughts authentication system.
+Instead, this study aims to collect useful data before such a system exists.
+It will not only elicit beliefs, 
+but also allow us to collect larger datasets, 
+and to catch technical issues in sensing devices and collection platforms.
+
+Even in this goal, the proposed study has a few limitations.
+First, it is unclear how closely the study protocol maps to actual passthought use in the wild.
+For example, people who use passthoughts may not wish to wear an EEG device all day, as our subjects would.
+Furthermore, the system proposed here does not provide a realistic authentication context, in that subjects
+are asked to use the system at pre-defined points during the day. 
+Future work could create more realistic concepts, perhaps ones in which subjects have an intrinsic motivation (or stake) for the authenticator to work correctly.
+
 \section{Privacy, Security: Choices, Tradeoffs}
-\label{sec:orgbb7cf43}
+\label{sec:org12abefb}
 
 After the studies described above, 
 we will have a much better grasp on the usability, and security properties of passthought authentication.
@@ -428,7 +503,7 @@ This section briefly reviews risks to user privacy and security that widespread 
 We present broad class of categories from which such risks may emerge. 
 
 \subsection{Privacy}
-\label{sec:orga1e2eb9}
+\label{sec:org13854dd}
 As of yet, it is still not well understood what EEG signals might reveal about a person.
 EEG signals that are not anonymized could come to be seen as private in the face of new methods of analysis.
 (If your brainwaves can authenticate you, could they also uniquely identify you, even if your name is redacted?)
@@ -436,7 +511,7 @@ Differential privacy \cite{Dwork2014} presents one approach to dealing with the 
 By adding noise to datasets, differentially private databases can make strong guarantees about the likelihood of a de-anonymization attack on particular database queries.
 
 \subsection{Security}
-\label{sec:org759dea8}
+\label{sec:orgac01f42}
 Device security presents another risk to passthought authentication.
 Since EEG devices will transmit data, likely wirelessly \cite{Mihajlovic2015}, their data may be intercepted, depending on the security properties of the underlying transit protocol. 
 When transferring authentication credentials in passthoughts, the ability to snoop on authentication attempts could present a dangerous attack vector.
@@ -452,7 +527,7 @@ It remains an open question what specific protections and access controls will y
 Homomorphic encryption, in which computation such as database queries can be performed on encrypted data, provides one interesting path for future work \cite{Tu2013}.
 
 \subsection{Tradeoffs between security and privacy}
-\label{sec:orgd71b4f9}
+\label{sec:org3cb1742}
 
 In some cases, passthoughts could present direct tradeoffs between security and privacy.
 For example, end-user privacy could be enhanced by storing all data locally, on the phone. 
@@ -470,7 +545,7 @@ user privacy might be more challenging to quantify, as might the tradeoffs betwe
 However, future work will need to address these issues if we are to balance users' security requirements with their privacy requirements.
 
 \section{Further Future Directions}
-\label{sec:org9fefd9f}
+\label{sec:orged2d30f}
 
 This paper so far has motivated two future studies on passthoughts,
 and discussed potential risks intrinsic to the development of passthoughts systems.
@@ -478,7 +553,7 @@ With these risks in mind, the present section explores some of the exciting poss
 Through the lens of passthoughts, we hope to use this discussion as an opportunity to challenge (or at least destabilize) dominant assumptions in authentication.
 
 \subsection{Continuous authentication}
-\label{sec:org40ff196}
+\label{sec:org4bbe60c}
 
 After immediate challenges are overcome,
 one potentially exciting possibility is that of using EEG for \emph{continuous authentication}.
@@ -495,7 +570,7 @@ which, after initial authentication, establish only posession.
 Individual login attempts also offer security improvements over traditional passthoughts alone, as the continuous inherence step provides an ongoing validation against individual authentication attempts.
 
 \subsection{Organic passwords}
-\label{sec:org74d0a56}
+\label{sec:org4ccf763}
 
 If EEG signals are nonstationary (changing over time), passthoughts will require continuous re-calibration to maintain decent accuracy \cite{Vidaurre2006a}.
 This feature of BCIs could have an unexpected benefit to security. 
@@ -506,7 +581,7 @@ unless they are able to realistically mutate the signal over authentication atte
 This feature of EEG also gives passthoughts a possible advantage over other methods for behavioral authentication, such as voice or keystroke dynamics \cite{Monrose1997}, which may change more slowly for individuals, if they change at all.
 Future work should investigate this claim, perhaps using a longitudinal corpus such as the one described above.
 \subsection{Authentication and the self}
-\label{sec:org740e10b}
+\label{sec:orgc34f1a2}
 
 Where authenticity is nominally concerned with proving that you are who you say you are,
 a less-frequently-asked question in the authentication literature is,
@@ -526,7 +601,7 @@ What are possible vectors for abuse?
 In any case, this property of an authentication is, as far as we are aware, novel, 
 and should be considered as we learn more about the strengths, weaknesses, and particular affordances of this developing method for authentication.
 \subsection{Passthoughts by any other sensor?}
-\label{sec:org8dc3b22}
+\label{sec:org55fcab6}
 
 At the end of the day, past passthoughts work has collected electromagnetic signals from the body at the surface of the skin.
 What is important about passthoughts is not so much the EEG per se, but that it is both secret and idiosyncratic (knowledge and inherence), that its performance had no tell, and that its performance was not easily explained to others.
@@ -537,7 +612,7 @@ Muscular activity associated with thoughts might, after all, be both difficult t
 Future work could investigate such claims further, or use different types of sensors that may have a similar effect (EKG, fNIRs).
 
 \subsection{Health, neuroscience and BCIs}
-\label{sec:org037222f}
+\label{sec:orga1d8b9b}
 
 Neuroscience fuels some of the most chilling predictions in science fiction \cite{Welsh2011}.
 It also stands for some of the greatest possible advances in medicine, mental health, and understanding of human behavior.
@@ -563,7 +638,7 @@ This balance will also require a deeper understanding of individuals' attitudes 
 and how private people believe them to be.
 
 \section{Conclusion}
-\label{sec:orgc0cdb64}
+\label{sec:org74bc9a2}
 
 In general, as sensors grow smaller and cheaper, devices more connected, and machine learning more sophisticated, 
 people will build increasingly high-resolution models of human physiology ``in the wild.''

@@ -233,6 +233,71 @@ Will people shy away from using their passthought authenticator in certain situa
 \label{fig:rank}
 [[./figures/rankings.png]]
 
+Our qualitative data revealed that subjects in both groups generally believed EEG to reveal various details about the mind, mood, emotions, and identity.
+We asked subjects to reflect on why they answered the way they did during the ranking task (Figure \ref{fig:rank}).
+In the Health-e-Heart group, several subjects gave relatively specific explanations as to why they ranked EEG hihgly.
+
+#+BEGIN_QUOTE
+/(S24) I assume some information can be gleaned from brain wave activity in various parts of the brain related to rewards or executive control, but without accompanying information, it may be difficult to discover my thoughts./
+#+END_QUOTE
+
+#+BEGIN_QUOTE
+/(S23) EEGs note parts of the brain that are active.  Again, in conjunction with other measurements, I suspect that some sense of what one is thinking and feeling could be learned./
+#+END_QUOTE
+
+#+BEGIN_QUOTE
+/(S91) I would rate this relatively high on the list because science has shown that we can detect a lot about which areas of the brain are accessed and at which times.  This can tell a person a lot about what they might be thinking and especially how they are feeling./
+#+END_QUOTE
+
+While these explanations range somewhat in their specificity and confidence,
+they share the general sentiment that EEGs can be revealing. Subjects in the Mechanical Turk condition broadly shared this belief, though tended to use less physiological detail in their explanations.
+
+#+BEGIN_QUOTE
+/(S157) Brain activity can pinpoint exact emotions by monitoring certain areas on the brain./
+#+END_QUOTE
+
+#+BEGIN_QUOTE
+/(S130) Brainwaves could tell you a lot more about what someone is thinking and feeling. You could measure the patterns of brainwaves in an experiment./
+#+END_QUOTE
+
+Meanwhile, some subjects from both groups did not fit this trend. Ten subjects ranked EEG low in its ability to measure what a person is thinking or feeling. Their qualitative answers revealed a diverse set of reasons for this ranking.
+Three subjects indicated a general lack of faith in brainwave's reliabilty.
+
+#+BEGIN_QUOTE
+/(S20) I don't think we have the ability to translate brainwaves into thoughts or emotions./
+#+END_QUOTE
+
+#+BEGIN_QUOTE
+/(S101) EEG is very nonspecific and rarely can tell details reliably./
+#+END_QUOTE
+
+#+BEGIN_QUOTE
+/(S138) Possible but not accurate./
+#+END_QUOTE
+
+These explanations broadly centered around EEG as a signal.
+They range somewhat in their confidence, from a fundamental skepticism (S20) to caveats about possible accuracy or specificity (S101, S138).
+In contrast to these three subjects, S10 ranked EEG low because s/he
+felt the premise of a consumer grade EEG was implausible.
+
+#+BEGIN_QUOTE
+/(S10) I assume that scientists can identify by brain patterns what others are feeling and thinking based off of years of research.  I've never heard of a consumer grade eeg - and doubt it could be as powerful as a laboratory eeg.  If it is then I would be interested in this product./
+#+END_QUOTE
+
+This subject's explanation surfaces the practical differences in attitudes that people might have to a technology's theoretical existence,
+and its realized existence as a consumer device. Future work could look more closely at 
+how the presumed scientific authority of a brainscanning apparatus affects people's willingness to accept specific BCI applications such as passthoughts cite:Ali2014a.
+Finally, one subject's skepticism what brainwaves can reveal stemmed from his/her personal medical experiences.
+
+#+BEGIN_QUOTE
+/(S116) My son has absence seizures, so his brainwaves change./
+#+END_QUOTE
+
+This quote highlights how individuals' life experiences
+might shape the way they engage (or refuse to engage) with brain-sensing devices.
+In general, this quote and others motivate the need for a rich, qualitative understanding of people's first-hand experiences with brainscanning devices,
+as well as data collection,
+in order to understand what role BCI applications such as passthoughts could play in day-to-day life.
 * Diversity and security of passthoughts
 
 While the previous section outlined questions around user attitudes, empirical questions about passthoughts, as signals, also linger.
@@ -249,7 +314,7 @@ A primary question in passthoughts surrounds how large the real space of possibl
 While the space of possible passthoughts is potentially unlimited, we do not yet know what passthoughts we stand a reasonable chance at observing consistently over time.
 A larger corpus of data might help shed light on this issue by allowing us to observe the distribution of signals that people produce over time.
 
-A more subtle, but closely related question surrounds how passthought EEG recordings relate statistically to non-passthought EEG recordings.
+A more subtle, but related question surrounds how passthought EEG recordings compare to non-passthought EEG recordings.
 In other words, we do not know how the particular passthoughts observed in past work are drawn from the distribution of EEG signals that an individual produces over the course of their day.
 This blind-spot poses a possible challenge to passthought's vulnerability to dictionary-style cracking.
 If an attacker has a large enough corpus of EEG readings, do some passthoughts start to look as guessable as /password1234/?
