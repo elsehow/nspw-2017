@@ -37,7 +37,7 @@ The protocol appears to be robust against impersonation attacks cite:Johnson2014
 
 
 While recent work is heartening, passthoughts remains confined, for now, to the lab.
-This paper reviews the immediate questions that must be addressed if passthoughts is to move into everyday life \ref{fig:diagram}.
+This paper reviews the immediate questions that must be addressed if passthoughts is to move into everyday life (Figure \ref{fig:diagram}).
 First, we must understand the real usability properties of passthoughts.
 The usability of passthoughts authentication will depend not only on its performance in ecologically valid contexts,
 but also on people's attitudes about brainwaves, EEG, and biosensing generally (Section 3).
@@ -50,7 +50,7 @@ and how passthoughts change over time (Section 4).
 
 In addition, computing broadly has undergone many sea changes since passthought's initial proposal in 2005.
 Biosensing (the sensing of humans) has proliferated throughout our everyday life, due both to the sensors ubiquitous in smartphones, and to general improvements to infrastructures of data collection and machine learning at scale. 
-Do these changes make passthoughts less appealing compared to other authentication strategies that these "sea changes" have made possible? 
+Is passthoughts more or less appealing in light of other authentication strategies these "sea changes" have made possible? 
 
 This paper aims both to re-validate passthought's promise as an authentication paradigm (Section 2), and to 
 motivate and contextualize two studies that could begin to address the challenges posed above (Section 5).
@@ -170,8 +170,8 @@ sources of artifacts, and use in a brain-computer interface (BCI) system based o
 auditory evoked potentials and visual evoked potentials
 cite:Looney2012a,Kidmose2013a,Kidmose2013b.
 
-cite:curranpassthoughts was the first to merge in-ear EEG with passthought authentication,
- using a modified consumer grade EEG device with a single electrode, achieving approximately 80 percent authentication accuracy. 
+The first attempt to merge in-ear EEG with passthought authentication
+used a modified consumer grade EEG device with a single electrode, achieving approximately 80 percent authentication accuracy cite:curranpassthoughts.
 Ongoing work from the same authors investigates the use of custom-fit earbuds with multiple embedded electrodes \ref{fig:earbud}.
 Lending credibility to that study's claim that in-ear EEG could one day become feasible in consumer devices,
 United Sciences recently announced a consumer "hearable'' (in-ear wearable) called The Aware, which will measure EEG from the ear, among other biometrics.
