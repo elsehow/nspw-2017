@@ -414,7 +414,7 @@ Unfortunately, these challenges (particularly those around shifting neural signa
 This makes a longitudinal study with a working authenticator impractical for the time being.
 However, we may still perform a longitudinal study that allows us to interrogate the usability aspects around (and attitudes about) passthoughts specifically, and EEG generally.
 In so doing, we may also collect a larger and more diverse corpus of passthoughts, which can be used to address the paucity of data we face today.
-This section describes a technology probe cite:Gaver1999 that could help address both of these issues at the same time.
+This section describes a technology probe cite:Hutchinson2003 that could help address both of these issues at the same time.
 
 *** Study protocol
 
