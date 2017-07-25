@@ -9,9 +9,12 @@
 #+LATEX_HEADER: \acmYear{2017}
 #+LATEX_HEADER: \copyrightyear{2017}
 #+LATEX_HEADER: \acmPrice{15.00}
-#+TITLE:  Is the Future of Authenticity In Our Heads?
+#+LATEX_HEADER: \usepackage{balance}
+
+#+TITLE:  Is the Future of Authenticity All In Our Heads?
+\subtitle{Moving Passthoughts From the Lab to the World}
 #+Author: 
-#+SUBTITLE: Moving Passthoughts From the Lab to the World
+
 :end:
 
 * Introduction
@@ -632,3 +635,4 @@ In the meantime, probing the outer limits of ubiquitous, pervasive sensing can s
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{refs}
+\balance
