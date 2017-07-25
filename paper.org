@@ -19,7 +19,7 @@
 
 * Introduction
 
-Usable authentication is a long-standing problem in computer security.
+Usable authentication is a long-standing problem i#+SUBTITLE: n computer security.
 Traditional passwords are easy to guess and difficult to remember,
 while biometric authenticators like fingerprints are easy to steal and difficult to change.
 Possession of tokens or keys are susceptible to loss, 
