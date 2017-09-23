@@ -19,7 +19,7 @@
 
 * Introduction
 
-Usable authentication is a long-standing problem i#+SUBTITLE: n computer security.
+Usable authentication is a long-standing problem in computer security.
 Traditional passwords are easy to guess and difficult to remember,
 while biometric authenticators like fingerprints are easy to steal and difficult to change.
 Possession of tokens or keys are susceptible to loss, 
@@ -214,7 +214,7 @@ In both cases, knowing what people expect will help us anticipate their needs an
 If we wish to understand what role passthought authentication /could/ play in day-to-day life,
 we must view it both through the lens of potential privacy concerns, /and/ through the lens of possible opportunities for self-reflection and self-understanding. 
 Of course, users' attitudes will not be fixed: they will evolve over time, as users observe the device in action, and correlate its judgments with their own lived experiences cite:Nafus2016.
-In the next section, discuss how EEG as a sensing modality motivates questions around the meaning people may build around passthought authenticators.
+In the next section, we discuss how EEG as a sensing modality motivates questions around the meaning people may build around passthought authenticators.
 
 # The prior section outlined the first major challenge to passthought authentication: that of corpus diversity.
 # The following section reviews a more subtle challenge: that of usability, as it relates to attitudes around sensing brainwaves.
@@ -226,7 +226,7 @@ The survey we report on here, currently in-progress, examines how people's belie
 In one portion of the survey, we ask subjects to rate a number of different biosensors in order of how likely individual's believe each sensor is to reveal what ``a person is thinking or feeling'' (Figure \ref{fig:rank}).
 This section reports on a subset of Mechanical Turk workers (n=100) and Health-e-Hearth subjects (n=100).
 
-In our preliminary findings, brainwaves (EEG) are seen as among the most revealing biosignals, just below body language and facial expression, in their capacity to reveal the goings on of a person's mind. 
+In our preliminary findings, brainwaves (EEG) are seen as among the most revealing biosignals, just below body language and facial expression, in their capacity to reveal the inner workings of a person's mind. 
 More common sensors such as GPS and step count are seen as less revealing (despite empirical evidence suggesting such data can be quite revealing indeed cite:Canzian2015).
 What will this finding mean for wider adoption? 
 Will people shy away from using their passthought authenticator in certain situations, or when they are feeling some type of way?
@@ -340,7 +340,7 @@ Together, these studies address both long-term concerns about user attitudes and
 
 ** A real-time passthought authenticator
 
-Passthoughts promise more usable form multi-factor authentication compared to existing protocols,
+Passthoughts promise a more usable form multi-factor authentication compared to existing protocols,
 as they provide both a knowledge and an inherence factor in a single-step user action.
 However, no study yet has systematically evaluated passthoughts' usability.
 Here, we propose a study aimed at examining passthoughts' usability in an ecologically valid context.
