@@ -20,47 +20,56 @@
 * Introduction
 
 Usable authentication is a long-standing problem in computer security.
-Traditional passwords are easy to guess and difficult to remember,
-while biometric authenticators like fingerprints are easy to steal and difficult to change.
-Possession of tokens or keys are susceptible to loss, 
-and the use of multiple factors (such as password and SMS) require multiple steps, hindering wider adoption.
+Traditional passwords are easy to guess and difficult to remember, while
+biometric authenticators like fingerprints are easy to steal and difficult to
+change. Possession of tokens or keys are susceptible to loss, and the use of
+multiple factors (such as password and SMS) require multiple steps, hindering
+wider adoption.
 
-First proposed by cite:Thorpe2005, ``passthoughts'' authentication allows users to 
-to submit both a knowledge factor (i.e., a secret thought) and an inherence factor (i.e., the unique way that thought is expressed)
-in a single step, by performing a single mental task cite:Johnson2014.
-Since its original proposal, passthoughts has been validated in lab settings, even with 
-consumer-grade devices cite:Chuang2013b and in-ear EEG earbuds cite:curranpassthoughts.
-The protocol appears to be robust against impersonation attacks cite:Johnson2014.
+First proposed by cite:Thorpe2005, ``passthoughts'' authentication allows users
+to to submit both a knowledge factor (i.e., a secret thought) and an inherence
+factor (i.e., the unique way that thought is expressed) in a single step, by
+performing a single mental task cite:Johnson2014. Since its original proposal,
+passthoughts has been validated in lab settings, even with consumer-grade
+devices cite:Chuang2013b and in-ear EEG earbuds cite:curranpassthoughts. The
+protocol appears to be robust against impersonation attacks cite:Johnson2014.
 # passthoughts have no visible ``tell,'' making them impervious to shoulder surfing attacks.
-
 
 #+caption: Challenges moving passthought authentication from the lab to the real world.
 \label{fig:diagram}
 [[./figures/passthoughts-diagram.png]]
 
 
-While recent work is heartening, passthoughts remains confined, for now, to the lab.
-This paper reviews the immediate questions that must be addressed if passthoughts is to move into everyday life (Figure \ref{fig:diagram}).
-First, we must understand the real usability properties of passthoughts.
-The usability of passthoughts authentication will depend not only on its performance in ecologically valid contexts,
-but also on people's attitudes about brainwaves, EEG, and biosensing generally (Section 3).
-Second, we must test passthoughts in a variety of conditions: ambulatory settings, under different levels of stress, drowsiness, caffeine or alcohol, etc.
-This statistical analysis will help us understand 
-the space of possible passthoughts,
-and how passthoughts change over time (Section 4).
+While recent work is heartening, passthoughts remains confined, for now, to the
+lab. This paper reviews the immediate questions that must be addressed if
+passthoughts is to move into everyday life (Figure \ref{fig:diagram}). First, we
+must understand the real usability properties of passthoughts. The usability of
+passthoughts authentication will depend not only on its performance in
+ecologically valid contexts, but also on people's attitudes about brainwaves,
+EEG, and biosensing generally (Section 3). Second, we must test passthoughts in
+a variety of conditions: ambulatory settings, under different levels of stress,
+drowsiness, caffeine or alcohol, etc. This statistical analysis will help us
+understand the space of possible passthoughts, and how passthoughts change over
+time (Section 4).
 # It will also help us estimate how easy or difficult passthoughts are to guess, or crack (Section 4).
 # Through this work, we may build a better understanding of the statistical distribution of EEG signals that a person gives off during the course of their life. 
 
-In addition, computing broadly has undergone many sea changes since passthought's initial proposal in 2005.
-Biosensing (the sensing of humans) has proliferated throughout our everyday life, due both to the sensors ubiquitous in smartphones, and to general improvements to infrastructures of data collection and machine learning at scale. 
-Is passthoughts more or less appealing in light of other authentication strategies these "sea changes" have made possible? 
+In addition, computing broadly has undergone many sea changes since
+passthought's initial proposal in 2005. Biosensing (the sensing of humans) has
+proliferated throughout our everyday life, due both to the sensors ubiquitous in
+smartphones, and to general improvements to infrastructures of data collection
+and machine learning at scale. Is passthoughts more or less appealing in light
+of other authentication strategies these ``sea changes'' have made possible?
 
-This paper aims both to re-validate passthought's promise as an authentication paradigm (Section 2), and to 
-motivate and contextualize two studies that could begin to address the challenges posed above (Section 5).
-While passthoughts is not without risks (Section 6),
-it could lead to novel /types/ of authentication,
-which challenge (or at least destabilize) dominant assumptions about what authentication 
-can and should be able to do. (Section 7).
+This paper aims both to re-validate passthought's promise as an authentication
+paradigm (Section 2), and to motivate and contextualize two studies that could
+begin to address the challenges posed above (Section 5). While passthoughts is
+not without risks (Section 6), it could lead to novel /types/ of authentication,
+which challenge (or at least destabilize) dominant assumptions about what
+authentication can and should be able to do. (Section 7). We argue
+that passthoughts is a useful case for thinking about authentication, as it
+raises interesting philosophical questions about what the self /is/ such that
+authentication systems might seek to detect it.
 
 # The first study focuses on the use of passthoughts in a realistic, though lab-constrained setting, 
 
@@ -75,33 +84,37 @@ can and should be able to do. (Section 7).
 
 * Background
 
-Authentication seeks to prove that a user is who they claim to be.
-In computer security, authenticators are classified into three types: knowledge factors (e.g., passwords
-and PINs), possession factors (e.g., physical tokens, ATM cards), and inherence
-factors (e.g., fingerprints and other biometrics). 
+Authentication seeks to prove that a user is who they claim to be. In computer
+security, authenticators are classified into three types: knowledge factors
+(e.g., passwords and PINs), possession factors (e.g., physical tokens, ATM
+cards), and inherence factors (e.g., fingerprints and other biometrics).
+Passwords, which rely only on a knowledge factor, offer many benefits
+cite:Bonneau2012, including their capability for allowing /authorization/
+(granting use of a system). However, for authentication (verifying an
+individual), passwords are easy to compromise, and easy to forget. These
+shortcomings motivate the overlay of multiple factors of authentication.
 
-An ongoing problem in authentication lies in balancing strong security
-(i.e., multiple factors of authentication)
-with usability.
-As an example, major industry players such as Google and
-Facebook have strongly encouraged their users to adopt two-factor
-authentication (2FA), in which a user enters his or her password (a knowledge factor),
-and subsequently receives a code on their cellphone (a posession factor).
+An ongoing problem in authentication lies in balancing strong security (i.e.,
+multiple factors) with usability. As an example, major industry players such as
+Google and Facebook have strongly encouraged their users to adopt two-factor
+authentication (2FA), in which a user enters his or her password (a knowledge
+factor), and subsequently receives a code on their cellphone (a posession
+factor).
 
-However, submitting two different 
-authenticators in two separate steps has frustrated wide adoption
-due to its additional hassle to users. The Apple iPhone, for instance,
-already supports device unlock using either a user-selected passcode or a fingerprint. The
-device could very well support a two-step two-factor authentication scheme if
-desired. However, it is easy to understand why users would balk at having to
-enter a passcode /and/ provide a fingerprint each time they want to unlock their phone.
+However, submitting two different authenticators in two separate steps has
+frustrated wide adoption due to its additional hassle to users. The Apple
+iPhone, for instance, already supports device unlock using either a
+user-selected passcode or a fingerprint. The device could very well support a
+two-step two-factor authentication scheme if desired. However, it is easy to
+understand why users would balk at having to enter a passcode /and/ provide a
+fingerprint each time they want to unlock their phone.
 
 To assist with the usability issues surrounding multi-factor authentication,
-passthoughts aims to provide two factors of authentication in a single step.
-A single mental task, or passthought, provides both a knowledge factor (a chosen secret thought)
-with an inherence factor (the way that thought is expressed for an individual) cite:Chuang2013b,Johnson2014.
-Using a custom sensing device, passthoughts could provide an additional posession factor, all in the same step.
-
+passthoughts aims to provide two factors of authentication in a single step. A
+single mental task, or passthought, provides both a knowledge factor (a chosen
+secret thought) with an inherence factor (the way that thought is expressed for
+an individual) cite:Chuang2013b,Johnson2014. Using a custom sensing device,
+passthoughts could provide an additional posession factor, all in the same step.
 
 ** One-step, multi-factor authentication
 
@@ -109,23 +122,29 @@ Using a custom sensing device, passthoughts could provide an additional posessio
 # one-step, three-factor authentication. 
 # Furthermore, passthoughts are resistant to spoofing attacks...............andhard to describe to othersk
 
-Since passthought's initial proposal in 2005,
-more ubiquitous sensing and computing has enabled a number of other strategies for achieving two factors of authentication in a single step. 
-Some work has tested behavioral authentication methods such as keystroke dynamics, or voice. In both cases, the knowledge factor (password or passphrase) and
-inherence factor (typing rhythm or speaker's voice) are employed cite:Monrose1997.
-In contrast, the Nymi band supports one-step two-factor authentication via the inherence
-factor (cardiac rhythm that is supposed to be unique to each individual) and the
-possession factor (the wearing of the band on the wrist) cite:Nymi.
-More recent attempts have also used gait (from cellphone accelorometers) to perform authentication cite:UnifyID2017.
+Since passthoughts' initial proposal in 2005, more ubiquitous sensing and
+computing has enabled a number of other strategies for achieving two factors of
+authentication in a single step. Some work has tested behavioral authentication
+methods such as keystroke dynamics, or voice. In both cases, the knowledge
+factor (password or passphrase) and inherence factor (typing rhythm or speaker's
+voice) are employed cite:Monrose1997. In contrast, the Nymi band supports
+one-step two-factor authentication via the inherence factor (cardiac rhythm that
+is supposed to be unique to each individual) and the possession factor (the
+wearing of the band on the wrist) cite:Nymi. More recent attempts have also used
+gait (from cellphone accelorometers) to perform authentication cite:UnifyID2017.
 # Custom-built EEG devices could incorporate an added possession factor 
 # to the already two-step authentication provided by passthoughts cite:Curran2017.
 
-However, these existing strategies are susceptible to a variety of attacks. 
-Nymi, for example, does not have a knowledge factor, making it impossible for the user to change the authentication token if the device and biosignal have been compromised.
-Keystroke dynamics, voice, and gait are all susceptable to ``shoulder surfing,'' in which an attack uses visual or other cues to steal, or improve the chances of guessing, a target's chosen secret. 
-Passthoughts mitigates this attack by nature of the mental gesture.
-Since the expression of a passthought is not externally visible, the authenticator is impervious to shoulder surfing attacks.
-Since the thought a chosen secret (knowledge factor), it can be changed if compromised. 
+However, these existing strategies are susceptible to a variety of attacks.
+Nymi, for example, does not have a knowledge factor, making it impossible for
+the user to change the authentication token if the device and biosignal have
+been compromised. Keystroke dynamics, voice, and gait are all susceptable to
+``shoulder surfing,'' in which an attack uses visual or other cues to steal, or
+improve the chances of guessing, a target's chosen secret. Passthoughts
+mitigates this attack by nature of the mental gesture. Since the expression of a
+passthought is not externally visible, the authenticator is impervious to
+shoulder surfing attacks. Since the thought a chosen secret (knowledge factor),
+it can be changed if compromised.
 
 # Authentication protocols are often susceptible to a so-called /rubber-hose attack/, in which users are coerced into giving up their chosen secret (e.g. password), biometric, or unique token, voluntarily or not cite:Bojinov2012,Martinovic2012. This attack is particularly effective against protocols that rely only on inherence factors, as inherent traits such as fingerprints are difficult to change without costly repercussions cite:Spielberg2002. One defense against such an attack is /tacit authentication/, in which the user does not know exactly how s/he performs the authenticating action.
 
@@ -177,7 +196,7 @@ The first attempt to merge in-ear EEG with passthought authentication
 used a modified consumer grade EEG device with a single electrode, achieving approximately 80 percent authentication accuracy cite:curranpassthoughts.
 Ongoing work from the same authors investigates the use of custom-fit earbuds with multiple embedded electrodes \ref{fig:earbud}.
 Lending credibility to that study's claim that in-ear EEG could one day become feasible in consumer devices,
-United Sciences recently announced a consumer "hearable'' (in-ear wearable) called The Aware, which will measure EEG from the ear, among other biometrics.
+United Sciences recently announced a consumer ``hearable'' (in-ear wearable) called The Aware, which will measure EEG from the ear, among other biometrics.
 
 * User attitudes and perceptions
 
@@ -218,7 +237,6 @@ In the next section, we discuss how EEG as a sensing modality motivates question
 
 # The prior section outlined the first major challenge to passthought authentication: that of corpus diversity.
 # The following section reviews a more subtle challenge: that of usability, as it relates to attitudes around sensing brainwaves.
-
 
 ** What (do you think) EEG can reveal about a person?
 
@@ -303,25 +321,38 @@ as well as data collection,
 in order to understand what role BCI applications such as passthoughts could play in day-to-day life.
 * Diversity and security of passthoughts
 
-While the previous section outlined questions around user attitudes, empirical questions about passthoughts, as signals, also linger.
-This section outlines and motivates the major quantitative questions that have not been fully answered by past work on passthoughts.
+While the previous section outlined questions around user attitudes, empirical
+questions about passthoughts, as signals, also linger. This section outlines and
+motivates the major quantitative questions that have not been fully answered by
+past work on passthoughts.
 
-While past work on passthoughts has achieved excellent results using recordings from different users, 
-these studies do not consider a variety of different subject conditions.
-For example, sitting subjects may have different patterns of neural activity from subjects who are standing, walking or exercising cite:Thibault2016a,
-let alone subjects who are under the influence of e.g. caffiene or alcohol.
-Passthoughts studies must collect larger, and more diverse corpora of EEG data to examine how passthoughts change (or remain stable) throughout the dynamic contexts of daily life.
+While past work on passthoughts has achieved excellent results using recordings
+from different users, these studies do not consider a variety of different
+subject conditions. For example, sitting subjects may have different patterns of
+neural activity from subjects who are standing, walking or exercising
+cite:Thibault2016a, let alone subjects who are under the influence of e.g.
+caffiene or alcohol. Passthoughts studies must collect larger, and more diverse
+corpora of EEG data to examine how passthoughts change (or remain stable)
+throughout the dynamic contexts of daily life.
 
-Investigating this topic could also help us understand how and why passthoughts work at all: Why are passthoughts unique, and how unique are they?
-A primary question in passthoughts surrounds how large the real space of possible passthoughts might be cite:Thorpe2005.
-While the space of possible passthoughts is potentially unlimited, we do not yet know what passthoughts we stand a reasonable chance at observing consistently over time.
-A larger corpus of data might help shed light on this issue by allowing us to observe the distribution of signals that people produce over time.
+Investigating this topic could also help us understand how and why passthoughts
+work at all: Why are passthoughts unique, and how unique are they? A primary
+question in passthoughts surrounds how large the real space of possible
+passthoughts might be cite:Thorpe2005. While the space of possible passthoughts
+is potentially unlimited, we do not yet know what passthoughts we stand a
+reasonable chance at observing consistently over time. A larger corpus of data
+might help shed light on this issue by allowing us to observe the distribution
+of signals that people produce over time.
 
-A more subtle, but related question surrounds how passthought EEG recordings compare to non-passthought EEG recordings.
-In other words, we do not know how the particular passthoughts observed in past work are drawn from the distribution of EEG signals that an individual produces over the course of their day.
-This blind-spot poses a possible challenge to passthought's vulnerability to dictionary-style cracking.
-If an attacker has a large enough corpus of EEG readings, do some passthoughts start to look as guessable as /password1234/?
-By answering such questions, we could design data-driven policies for, e.g., how many retry attempts passthought authenticators should allow.
+A more subtle, but related question surrounds how passthought EEG recordings
+compare to non-passthought EEG recordings. In other words, we do not know how
+the particular passthoughts observed in past work are drawn from the
+distribution of EEG signals that an individual produces over the course of their
+day. This blind-spot poses a possible challenge to passthought's vulnerability
+to dictionary-style cracking. If an attacker has a large enough corpus of EEG
+readings, do some passthoughts start to look as guessable as /password1234/? By
+answering such questions, we could design data-driven policies for, e.g., how
+many retry attempts passthought authenticators should allow.
 
 # _OUTLInE WHAT THIS SECTION DOES...................._
 
@@ -458,11 +489,28 @@ These cracking experiments could lead to defenses against cracking attempts, by 
 
 *** Usability and attitudes
 
-By deploying a real sensing apparatus, be it a traditional consumer device such as the Muse cite:Mihajlovic2015 
-or a more experimental piece of equipment such as an earbud,
-and having people record EEG data in their daily life, we could learn more about the interpretative qualities of these data cite:NafusDawn;Sherman2014.
-This study presents a dual opportunity to understand user beliefs with rich, qualitative data, 
-while simultaneously collecting the large, diverse and longitudinal corpus of EEG signals necessary if we wish to stand a chance at decent authentication accuracy in the wild.
+By deploying a real sensing apparatus, be it a traditional consumer device such
+as the Muse cite:Mihajlovic2015 or a more experimental piece of equipment such
+as an earbud, and having people record EEG data in their daily life, we could
+learn more about the interpretative qualities of these data
+cite:NafusDawn;Sherman2014. This study presents a dual opportunity to understand
+user beliefs with rich, qualitative data, while simultaneously collecting the
+large, diverse and longitudinal corpus of EEG signals necessary if we wish to
+stand a chance at decent authentication accuracy in the wild.
+
+This deployment would also provide a number of opportunities for better
+understanding how passthoughts compares to other modes of authentication.
+Subjects would need to set up the device themselves, and could compare the
+device's use with their existing password practices. Subjects might also need to
+share passthoughts, which could cause unforeseen complications, especially for
+persons with disabilities cite:Dosono2015.
+
+At-home deployments could also allow for investigation of subjects' capacities
+for remembering their passthoughts. A study could ask subjects to remember a
+number of passthoughts, to see how many passthoughts can be remembered (and how
+many different passthoughts an authentication system could detect). The study
+may also ask subjects to change their passthoughts, to see how easy or difficult
+it is for users to adapt if their pasthought needs to be reset.
 
 *** Limitations
 
@@ -481,13 +529,14 @@ Future work could create more realistic concepts, perhaps ones in which subjects
 
 * Privacy, Security: Choices, Tradeoffs
 
-After the studies described above, 
-we will have a much better grasp on the usability, and security properties of passthought authentication.
-However, there may still be unexplored risks, challenges, and tradeoffs,
-especially around user privacy.
-Indeed, some of these risks are unique to the application context of biometric authentication, and to EEG as a class of biosignal. 
-This section briefly reviews risks to user privacy and security that widespread passthought authentication may introduce. 
-We present broad class of categories from which such risks may emerge. 
+After the studies described above, we will have a much better grasp on the
+usability, and security properties of passthought authentication. However, there
+may still be unexplored risks, challenges, and tradeoffs, especially around user
+privacy. Indeed, some of these risks are unique to the application context of
+biometric authentication, and to EEG as a class of biosignal. This section
+briefly reviews risks to user privacy and security that widespread passthought
+authentication may introduce. We present broad class of categories from which
+such risks may emerge.
 
 ** Privacy
 As of yet, it is still not well understood what EEG signals might reveal about a person.
@@ -529,12 +578,15 @@ Whereas security might be measured straightforwardly using false-acceptance and 
 user privacy might be more challenging to quantify, as might the tradeoffs between the two.
 However, future work will need to address these issues if we are to balance users' security requirements with their privacy requirements.
 
-* Further Future Directions
+* Discussion
 
-This paper so far has motivated two future studies on passthoughts,
-and discussed potential risks intrinsic to the development of passthoughts systems.
-With these risks in mind, the present section explores some of the exciting possibilities that could unfold after the immediate priorities described in the prior sections.
-Through the lens of passthoughts, we hope to use this discussion as an opportunity to challenge (or at least destabilize) dominant assumptions in authentication.
+This paper so far has motivated two future studies on passthoughts, and
+discussed potential risks intrinsic to the development of passthoughts systems.
+With these risks in mind, the present section explores some of the exciting
+possibilities that could unfold after the immediate priorities described in the
+prior sections. Through the lens of passthoughts, we hope to use this discussion
+as an opportunity to challenge (or at least destabilize) dominant assumptions in
+authentication.
 
 # Such a study could shed light both on behavioral and privacy aspects around passthoughts as a specific brain-computer interface, while simultaneously assisting efforts to build more robust features, models and classifiers. 
 
@@ -558,33 +610,71 @@ Individual login attempts also offer security improvements over traditional pass
 
 ** Organic passwords
 
-If EEG signals are nonstationary (changing over time), passthoughts will require continuous re-calibration to maintain decent accuracy cite:Vidaurre2006a.
-This feature of BCIs could have an unexpected benefit to security. 
-If an individual's expression of their passthought in EEG is always changing, 
-passthoughts themselves are effectively evergreen, automatically replaced or updated by nature of the authentication paradigm.
-This feature could improve security, as an attacker able to compromise a passthought's EEG signature may not be able to log into the system in a few weeks time,
-unless they are able to realistically mutate the signal over authentication attempts.
-This feature of EEG also gives passthoughts a possible advantage over other methods for behavioral authentication, such as voice or keystroke dynamics cite:Monrose1997, which may change more slowly for individuals, if they change at all.
-Future work should investigate this claim, perhaps using a longitudinal corpus such as the one described above.
+If EEG signals are nonstationary (changing over time), passthoughts will require
+continuous re-calibration to maintain decent accuracy cite:Vidaurre2006a. This
+feature of BCIs could have an unexpected benefit to security. If an individual's
+expression of their passthought in EEG is always changing, passthoughts
+themselves are effectively evergreen, automatically replaced or updated by
+nature of the authentication paradigm. This feature could improve security, as
+an attacker able to compromise a passthought's EEG signature may not be able to
+log into the system in a few weeks time, unless they are able to realistically
+mutate the signal over authentication attempts. This feature of EEG also gives
+passthoughts a possible advantage over other methods for behavioral
+authentication, such as voice or keystroke dynamics cite:Monrose1997, which may
+change more slowly for individuals, if they change at all. Future work should
+investigate this claim, perhaps using a longitudinal corpus such as the one
+described above.
+
+** Attacks on passthoughts
+
+Passthoughts has yet to be subjected to rigorous threat analysis. One obvious
+threat is a simple replay attack, in which noise is added to recorded
+(intercepted) authentication attempts in order to trick the classifier into
+acceptance. Passthoughts' susceptibility to such an attack effectively reduces
+to the security of its components (the EEG scanner, the transmission device,
+etc). Thus, future work should examine the possible new attack vectors
+introduced by passthoughts' equipment, as these attack vectors
+could pave the way for attacks such as replays.
+
+A more interesting mode of attack could involved a principled search through the
+space of EEG signals. For example, a medical corpus of EEG signals might provide
+enough information about the distribution of EEG readings such that an attacker
+can generate convincing EEG signals. How these EEG signals might be used to
+discover the underlying properties of a given subject's space of passthoughts
+remains unknown. In either case, such a process could be viewed as a sort of
+dictionary attack, where existing knowledge about the space of passthoughts
+generally is used to compromise (or reduce the search space for) a particular
+passthought. Future work should employ various methods for synthesizing EEG
+signals in order to gain a greater appreciation for how susceptible passthoughts
+might be to such dictionary-style attacks.
+
 ** Authentication and the self
 
-Where authenticity is nominally concerned with proving that you are who you say you are,
-a less-frequently-asked question in the authentication literature is,
-``are you really yourself?''
-We all sometimes do or say regrettable things when we are feeling ``not quite ourselves,'' sometimes using devices or services with which we have authenticated ourself.
-Can authentication ever verify not only your possession of your body, but of your ``right mind''?
+Where authenticity is nominally concerned with proving that you are who you say
+you are, a less-frequently-asked question in the authentication literature is,
+``are you really yourself?'' We all sometimes do or say regrettable things when
+we are feeling ``not quite ourselves,'' sometimes using devices or services with
+which we have authenticated ourself. Can authentication ever verify not only
+your possession of your body, but of your ``right mind''?
 
-A question raised earlier surrounds where passthoughts could still work if a person is drunk, having a migraine, or in distress (Section 3). 
-Even if passthoughts fails when a user is in such an ``off-baseline'' state, 
-passthoughts still may have utility (perhaps even /added/ utility) in certain authentication contexts.
-For example, one may wish to allow themselves access to certain resources (e.g. bank accounts) when one's resting EEG state is not too much different from a pre-recorded baseline.
+A question raised earlier surrounds where passthoughts could still work if a
+person is drunk, having a migraine, or in distress (Section 3). Even if
+passthoughts fails when a user is in such an ``off-baseline'' state,
+passthoughts still may have utility (perhaps even /added/ utility) in certain
+authentication contexts. For example, one may wish to allow themselves access to
+certain resources (e.g. bank accounts) when one's resting EEG state is not too
+much different from a pre-recorded baseline.
 
-Such a scenario raises serious ethical, legal, and even philosophical questions. 
-How does such a system conform to accepted definitions of a ``person''?
-Who is a person to make decisions for their future self?
-What are possible vectors for abuse?
-In any case, this property of an authentication is, as far as we are aware, novel, 
-and should be considered as we learn more about the strengths, weaknesses, and particular affordances of this developing method for authentication.
+Such a scenario raises serious ethical, legal, and even philosophical questions.
+How does such a system conform to accepted definitions of a ``person''? Who is a
+person to make decisions for their future self? What are possible vectors for
+abuse? In any case, this property of an authentication is, as far as we are
+aware, novel, and should be considered as we learn more about the strengths,
+weaknesses, and particular affordances of this developing method for
+authentication. Future work might compare such scenarios with existing
+definitions of personhood and consent in legal systems, which may provide
+guidance (or, at minimum, a reference point) for such discussions.
+
 # Point out the necessity for this sort of data to be collected and analyzed to establish how different “drunk” & “caffeinated” EEG patterns are from “baseline” ones. Does this exist in some form in other literature? Neurology for example?
 ** Passthoughts by any other sensor?
 
@@ -622,7 +712,6 @@ This balance will also require a deeper understanding of individuals' attitudes 
 and how private people believe them to be.
 # It will also require understanidnand of user attitudes about what these signals might mean.
 # What are people willing to give up, regardless of empirical evidence?
-
 * Conclusion
 
 In general, as sensors grow smaller and cheaper, devices more connected, and machine learning more sophisticated, 
