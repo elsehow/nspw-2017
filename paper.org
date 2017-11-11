@@ -143,7 +143,7 @@ been compromised. Keystroke dynamics, voice, and gait are all susceptable to
 improve the chances of guessing, a target's chosen secret. Passthoughts
 mitigates this attack by nature of the mental gesture. Since the expression of a
 passthought is not externally visible, the authenticator is impervious to
-shoulder surfing attacks. Since the thought a chosen secret (knowledge factor),
+shoulder surfing attacks. Since the thought incorporates a chosen secret (knowledge factor),
 it can be changed if compromised.
 
 # Authentication protocols are often susceptible to a so-called /rubber-hose attack/, in which users are coerced into giving up their chosen secret (e.g. password), biometric, or unique token, voluntarily or not cite:Bojinov2012,Martinovic2012. This attack is particularly effective against protocols that rely only on inherence factors, as inherent traits such as fingerprints are difficult to change without costly repercussions cite:Spielberg2002. One defense against such an attack is /tacit authentication/, in which the user does not know exactly how s/he performs the authenticating action.
@@ -539,11 +539,16 @@ authentication may introduce. We present broad class of categories from which
 such risks may emerge.
 
 ** Privacy
-As of yet, it is still not well understood what EEG signals might reveal about a person.
-EEG signals that are not anonymized could come to be seen as private in the face of new methods of analysis.
-(If your brainwaves can authenticate you, could they also uniquely identify you, even if your name is redacted?)
-Differential privacy cite:Dwork2014 presents one approach to dealing with the risk of privacy breaches with EEG signals.
-By adding noise to datasets, differentially private databases can make strong guarantees about the likelihood of a de-anonymization attack on particular database queries.
+
+As of yet, it is still not well understood what EEG signals might reveal about a
+person. EEG signals that are not anonymized could come to be seen as private in
+the face of new methods of analysis. If your brainwaves can authenticate
+someone, could they also uniquely identify that person, even if their name is
+redacted? What about disability status (e.g. depression)? Differential privacy
+cite:Dwork2014 presents one approach to dealing with the risk of privacy
+breaches with EEG signals. By adding noise to datasets, differentially private
+databases can make strong guarantees about the likelihood of a de-anonymization
+attack on particular database queries.
 
 ** Security
 Device security presents another risk to passthought authentication.
